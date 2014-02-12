@@ -11,38 +11,35 @@
   
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-    
-  <script src="js/angular.min.js"></script> <!-- seems to need to be above scripts that ustilize it. -->
-  <script src="js/angular-route.min.js "></script> 
 </head>
 <body>
   <div id="wrapper">
     TEST
     <div>
       <!-- PLACEHOLDER FOR VIEWS -->
-      test2
       <div data-ng-view = ""></div>
     </div>
     
-    
+    <script src="js/angular.min.js"></script> <!-- seems to need to be above scripts that ustilize it. -->
+    <script src="js/angular-route.min.js "></script> 
 
-    test3
+    
     <script>
       
       var demoApp = angular.module('demoApp',['ngRoute']);
       
       demoApp.config(function ($routeProvider) {
-	
+
 	$routeProvider
-	  .when('/',
+	  .when('/view1',
 	    {
 	      controller: 'SimpleController',
-	      templateUrl: 'partials/view1.html'
+	      templateUrl: 'views/view1.html'
 	    })
 	  .when('/view2',
 	    {
 	      controller: 'SimpleController',
-	      templateUrl: 'partials/view2.html'
+	      templateUrl: 'views/view2.html'
 	    })
 	  .otherwise({redirectTo: '/'});
 
@@ -57,7 +54,8 @@
 	];
 	
 	$scope.addCustomer = function () {
-	  $scope.customers.push({
+	  $scope.customers.push(
+	    {
 	      name: $scope.newCustomer.name,city:$scope.newCustomer.city
 	    });
 	};
