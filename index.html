@@ -10,6 +10,7 @@
   <meta name="keywords" content="">
   
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
   <!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"> -->
   <!-- Preloading scripts? -->
   <script src="js/angular.min.js"></script>
@@ -22,12 +23,44 @@
     
 </head>
 <body>
+  <div id="wrapper">
+    <header>
+      <div id="logo">
+	<img src="images/logo.png" alt="Cinema Plus - Movies plus a whole lot more." class="img-responsive">
+      </div>
+    </header>
+    
+    <button type="button" class="btn btn-primary btn-lg btn-block">NOW PLAYING</button>
+    <button type="button" class="btn btn-default btn-lg btn-block">COMING FRIDAY</button>
+   
+    <!-- PLACEHOLDER -->
+    <div id="movieTotalBox">
+	
+      <div id="movieInfoBox">
+	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.title}}</button>
+	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.mpaa_rating}}</button>
+	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.runtime}} Minutes</button>
+      </div>
+      
+      <div id="moviImageBox">
+	<img ng-controller = "movieController" src={{movies.posters.original}} alt={{movies.title}} class="img-responsive">
+      </div>
+      
+    </div>
+    
+    <div id="floatStopper">
+        Note: This theator only plays one movie at a time. film will be hard coded into the app. Would like to see it fed by RSS orsomething in the future.
+    </div>
+   
+   
+   
+   
+   
+   
+    
+  </div> <!-- END WRAPPER -->
   
-  <!-- PLACEHOLDER -->
-  <div>
-    <div ng-controller = "movieController">{{movie.title}}</div>
-  </div>
-  <h1 class="btn-primary">index</h1>
+  
 
   
   

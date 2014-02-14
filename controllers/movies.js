@@ -1,9 +1,24 @@
-var movies = angular.module("movies", []); //quotes are name of this file
-movies.controller("movieController", function ($http, $scope){ //quotes are name of function called in index
+var movies = angular.module('movies', []);
+
+movies.controller('movieController', function ($scope, $http) {
+
+    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/155655062.json', {
+        params: {
+            apikey: 'wq98h8vn4nfnuc3rt2293vru',
+            callback: 'JSON_CALLBACK'
+        }
+    })
+    .success(function (data) {
+        $scope.movies = data;
+    });
      
-     $http.jsonp("http://api.rottentomatoes.com/api/public/v1.0.json?apikey=[wq98h8vn4nfnuc3rt2293vru]").sucess(function(data){$scope.movies = data}).error(function(data){});
-       
-       
-        
-     }
-    )
+     
+     
+      //$scope.apiKey = "[wq98h8vn4nfnuc3rt2293vru]";
+      
+      //$http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/155655062.json?apikey=' + $scope.apiKey + '/?callback=JSON_CALLBACK')
+      //.success(function(data) 
+          // { $scope.movies = data;})
+       // .error(function(error) {});
+ 
+     });
