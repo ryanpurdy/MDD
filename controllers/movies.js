@@ -1,3 +1,5 @@
+
+
 var movies = angular.module('movies', []);
 
 movies.controller('movieController', function ($scope, $http) {
@@ -11,7 +13,16 @@ movies.controller('movieController', function ($scope, $http) {
     .success(function (data) {
         $scope.movies = data;
     });
-     
+    
+    
  
 });
+     
 
+     $scope.comingSoon = function(){
+          alert();
+     }
+
+     $scope.nowShowing = function(){
+          document.write("asdasdasdasdasdasdasd");
+     } 
