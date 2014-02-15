@@ -9,8 +9,10 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.mysite.com/rss/rss2.xml" />
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
   <!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"> -->
   <!-- Preloading scripts? -->
   <script src="js/angular.min.js"></script>
@@ -30,28 +32,38 @@
       </div>
     </header>
     
-    <button type="button" class="btn btn-primary btn-lg btn-block">NOW PLAYING</button>
-    <button type="button" class="btn btn-default btn-lg btn-block">COMING FRIDAY</button>
+    <nav>
+      <div class='row-fluid'>
+	<div class="span2"></div>
+	<button ng-click="changeView('nowPlaying')" type="button" class="btn btn-primary btn-lg span4 "><h3>NOW PLAYING</h3></button>
+	<button ng-click="changeView('comingSoon')" type="button" class="btn btn-default btn-lg span4 "><h3>COMING FRIDAY</h3></button>
+	<div class="span2"></div>
+      </div>
+    </nav>
+    
+    
    
     <!-- PLACEHOLDER -->
-    <div id="movieTotalBox">
-	
-      <div id="movieInfoBox">
-	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.title}}</button>
-	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.mpaa_rating}}</button>
-	<button type="button" class="btn btn-default btn-lg active btn-block" ng-controller = "movieController">{{movies.runtime}} Minutes</button>
+    
+    <div id='content' class='row-fluid'>
+      
+      <div class='span8 info'>
+        <h2 ng-controller = "movieController">{{movies.title}}</h2>
+	<h2 ng-controller = "movieController">RATED: {{movies.mpaa_rating}}</h2>
+	<h2 ng-controller = "movieController">{{movies.runtime}} Minutes</h2>
+	<p ng-controller = "movieController">DESCRIPTION: {{movies.synopsis}}</p>
       </div>
       
-      <div id="moviImageBox">
-	<img ng-controller = "movieController" src={{movies.posters.original}} alt={{movies.title}} class="img-responsive">
+      <div class='span4 poster'>
+        <img ng-controller = "movieController" src={{movies.posters.original}} alt={{movies.title}} class="img-responsive">
       </div>
       
     </div>
     
-    <div id="floatStopper">
+    <div>
         Note: This theator only plays one movie at a time. film will be hard coded into the app. Would like to see it fed by RSS orsomething in the future.
     </div>
-   
+    
    
    
    
