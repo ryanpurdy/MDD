@@ -10,19 +10,19 @@ movies.controller('movieController', function ($scope, $http) {
             callback: 'JSON_CALLBACK'
         }
     })
+    
     .success(function (data) {
         $scope.movies = data;
     });
     
-    
+     $scope.nowShowing = function($log){
+          alert("WORK!!!!!!");
+          $log.info("nowShowing method fired");    
+     }
+     
+     $scope.comingSoon = function($log){
+          alert("WORK!!!!!!");
+          $log.info("nowShowing method fired");          
+     } 
  
 });
-     
-
-     $scope.comingSoon = function(){
-          alert();
-     }
-
-     $scope.nowShowing = function(){
-          document.write("asdasdasdasdasdasdasd");
-     } 
