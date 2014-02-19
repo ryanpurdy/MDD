@@ -1,6 +1,18 @@
+var movies = angular.module('movies', ['ngRoute']);
 
+movies.config(['$routeProvider', function($routeProvider){
+	$routeProvider
+		.when('/nowShowing',{
+			templateUrl:'views/nowShowing.html',
+			controller: 'movieController'})
+		.when('/comingSoon',{
+			templateUrl:'views/comingSoon.html',
+			controller: 'movieController2'})			
 
-var movies = angular.module('movies', []);
+		.otherwise({
+			redirectTo: '/nowShowing'
+		});
+}]);
 
 movies.controller('movieController', function ($scope, $http) {
 
@@ -15,14 +27,22 @@ movies.controller('movieController', function ($scope, $http) {
         $scope.movies = data;
     });
     
-     $scope.nowShowing = function($log){
-          alert("WORK!!!!!!");
-          $log.info("nowShowing method fired");    
-     }
-     
-     $scope.comingSoon = function($log){
-          alert("WORK!!!!!!");
-          $log.info("nowShowing method fired");          
-     } 
- 
 });
+
+movies.controller('movieController2', function ($scope, $http) {
+
+    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/771305753.json', {
+        params: {
+            apikey: 'wq98h8vn4nfnuc3rt2293vru',
+            callback: 'JSON_CALLBACK'
+        }
+    })
+    
+    .success(function (data) {
+        $scope.movies = data;
+    });
+    
+});
+
+
+
