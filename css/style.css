@@ -16,7 +16,7 @@ nav{
 
 nav a{
     color: black;
-    font:  36px;
+    
 }
 
 #wrapper{
@@ -44,7 +44,6 @@ nav a{
     width: 50%;
     background-color:  white;
     color: red;
-    font:  36px;
     
 }
 
@@ -67,25 +66,8 @@ nav a{
     -moz-border-radius: 10px; 
     -webkit-border-radius: 10px;
     margin: 0 10px 10px 10px;
-    font:  36px;
     
 }
 
 
-@media only screen and (max-width: 480px) {
-    nav a{
-        font:  10px;
-    }
-
-    #status{
-        font:  10px;
-        
-    }
-
-    .info h2{
-        font:  10px;
-        
-    }
-
-}
 

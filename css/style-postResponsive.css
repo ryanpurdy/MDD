@@ -1,0 +1,71 @@
+@media (max-width: 240px) {
+
+/* code for mobile only */
+    nav a{
+        font-size: 12px;
+    }
+    
+    #status{
+        font-size: 12px;
+    }
+    
+    .info h2{
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 240px) and (max-width: 320px) {
+
+/* code for mobile only */
+    nav a{
+        font-size: 18px;
+    }
+    
+    #status{
+        font-size: 18px;
+    }
+    
+    .info h2{
+        font-size: 18px;
+    }
+
+}
+
+
+
+@media (min-width: 320px) and (max-width: 720px) {
+
+/* code for tablets only */
+    nav a{
+        font-size: 24px;
+    }
+    
+    #status{
+        font-size: 24px;
+    }
+    
+    .info h2{
+        font-size: 24px;
+    }
+
+}
+
+
+
+@media (min-width: 720px) {
+
+/* all other code if its not mobile or tablet */
+    nav a{
+        font-size: 24px;
+    }
+    
+    #status{
+        font-size: 24px;
+    }
+    
+    .info h2{
+        font-size: 24px;
+    }
+
+}
