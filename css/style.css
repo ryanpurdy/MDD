@@ -8,6 +8,7 @@ body{
 
 nav{
     text-align: center;
+    margin:0 5px;
 }
 
 .btn{
@@ -16,7 +17,6 @@ nav{
 
 nav a{
     color: black;
-    
 }
 
 #wrapper{
@@ -68,6 +68,17 @@ nav a{
     margin: 0 10px 10px 10px;
     
 }
+
+label{
+    text-align: center;
+    border: thin solid #3DF5F5;
+    background-color: #CFFFFE;
+    border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    margin-top: 5px;  
+}
+
 
 
 

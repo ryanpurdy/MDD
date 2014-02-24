@@ -1,3 +1,21 @@
+nav a:link {       /* unvisited link */	
+	color:black;
+	text-decoration:none;
+}
+nav a:visited {  /* visited link */
+	color:black;
+	text-decoration:none;
+}
+nav a:hover {  /* mouse over link */
+	color:black;
+	text-decoration:none;
+}
+nav a:active {  /* selected link */
+	color:black;
+	text-decoration:none;
+}
+
+
 @media (max-width: 240px) {
 
 /* code for mobile only */
@@ -12,6 +30,10 @@
     .info h2{
         font-size: 12px;
     }
+    
+    textarea{
+		width: 60%;
+	}
 
 }
 
@@ -29,6 +51,9 @@
     .info h2{
         font-size: 18px;
     }
+    textarea{
+		width: 60%;
+	}
 
 }
 
@@ -48,6 +73,10 @@
     .info h2{
         font-size: 24px;
     }
+    textarea{
+		width: 75%;
+	}
+
 
 }
 
@@ -67,5 +96,9 @@
     .info h2{
         font-size: 24px;
     }
+    textarea{
+		width: 80%;
+	}
+
 
 }

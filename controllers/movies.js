@@ -1,5 +1,7 @@
 var movies = angular.module('movies', ['ngRoute']);
 
+
+
 movies.config(['$routeProvider', function($routeProvider){
 	$routeProvider
 		.when('/nowShowing',{
@@ -7,7 +9,11 @@ movies.config(['$routeProvider', function($routeProvider){
 			controller: 'movieController'})
 		.when('/comingSoon',{
 			templateUrl:'views/comingSoon.html',
-			controller: 'movieController2'})			
+			controller: 'movieController2'})
+		.when('/contact',{
+			templateUrl:'views/contact.html'})	
+		.when('/confirm',{
+			templateUrl:'views/confirm.html'})		
 
 		.otherwise({
 			redirectTo: '/nowShowing'
