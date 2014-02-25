@@ -15,6 +15,10 @@ nav a:active {  /* selected link */
 	text-decoration:none;
 }
 
+body{
+    background-color: #000000;
+}
+
 
 @media (max-width: 240px) {
 
@@ -32,7 +36,7 @@ nav a:active {  /* selected link */
     }
     
     textarea{
-		width: 60%;
+		width: 100%;
 	}
 
 }
@@ -52,7 +56,7 @@ nav a:active {  /* selected link */
         font-size: 18px;
     }
     textarea{
-		width: 60%;
+		width: 100%;
 	}
 
 }
@@ -74,7 +78,7 @@ nav a:active {  /* selected link */
         font-size: 24px;
     }
     textarea{
-		width: 75%;
+		width: 100%;
 	}
 
 
@@ -97,7 +101,7 @@ nav a:active {  /* selected link */
         font-size: 24px;
     }
     textarea{
-		width: 80%;
+		width: 100%;
 	}
 
 

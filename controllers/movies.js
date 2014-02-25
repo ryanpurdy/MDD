@@ -22,7 +22,7 @@ movies.config(['$routeProvider', function($routeProvider){
 
 movies.controller('movieController', function ($scope, $http) {
 
-    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/771303861.json', {
+    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/771351626.json', {
         params: {
             apikey: 'wq98h8vn4nfnuc3rt2293vru',
             callback: 'JSON_CALLBACK'
@@ -32,12 +32,14 @@ movies.controller('movieController', function ($scope, $http) {
     .success(function (data) {
         $scope.movies = data;
     });
+    
+    
     
 });
 
 movies.controller('movieController2', function ($scope, $http) {
 
-    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/771305753.json', {
+    $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/movies/771247277.json', {
         params: {
             apikey: 'wq98h8vn4nfnuc3rt2293vru',
             callback: 'JSON_CALLBACK'
@@ -51,4 +53,5 @@ movies.controller('movieController2', function ($scope, $http) {
 });
 
 
+  	
 
