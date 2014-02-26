@@ -2,6 +2,7 @@
           
     <form method="post" action="php/index.php" id='content' class='row-fluid'>
       
+      <!-- Creating a place to input personal info. -->
       <section class='span3 offset1 info'> <!-- Left side  -->
       	
       	<label>Name</label>
@@ -12,6 +13,7 @@
       
       </section>
       
+      <!-- This is where user can write message to owners -->
       <section class='span6 offset1 info'> <!-- Left side  -->
             
 	  	<label>Message</label>
@@ -19,10 +21,12 @@
 	  	
       </section>
       
+      <!-- basic math to counter robot attacks. Pew! Pew! Pew! -->
 	  <section class='span7 offset2 info'>
 	  	<label>What is 2+2? (Anti-spam)</label>
 	  	<input name="human" placeholder="Type Here">
 	  	
+	  	<!-- Submit the form and launch the mailer php thing. -->
 	  	<input class='btn btn-primary offset2' id="submit" name="submit" type="submit" value="Submit">
 	  </section>
       

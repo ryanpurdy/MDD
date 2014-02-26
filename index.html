@@ -2,21 +2,21 @@
 <html lang = "en" ng-app="movies"><!-- lets page use controllers/movies.js-->
 
 <head>
+<!-- Let's get this stuff loaded so we can make a website -->
   <title>Watch a movie!</title>
   
   <meta charset = "UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><!-- prevent users from zooming and stuff -->
   <meta name="description" content="">
   <meta name="keywords" content="">
   
-  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss/rss2.xml" />
+  <!-- CSS Stylesheets -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
   <!-- Preloading scripts? -->
   <script src="js/angular.min.js"></script>
   <script src="js/angular-route.js"></script>
-  <!--<script src="js/angular-resource.min.js" type="text/javascript"></script>-->
   <link href="css/style-postResponsive.css" rel="stylesheet" type="text/css"><!-- bootstrap hard coded font size and this is my work around. -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>  <!-- <script src="js/bootstrap.js"></script> -->
   <script src="controllers/movies.js"></script>
@@ -26,11 +26,12 @@
   <div id="wrapper">
     <header>
       <div id="logo">
-	<img src="images/logo.png" alt="Cinema Plus - Movies plus a whole lot more." class="img-responsive">
+		  <img src="images/logo.png" alt="Cinema Plus - Movies plus a whole lot more." class="img-responsive">
       </div>
     </header>
     
     <nav>
+    <!-- used 12 grid system. 3 chunks of 4. Should change from horizontal to vertical stack when screen becomes too small -->
       <div class='row-fluid'>
 	<a class='span4' href='#/nowShowing'><button type="button" id='nowShowing'  class="btn btn-default btn-lg"><h3>NOW PLAYING</h3></button></a>
 	<a class='span4' href='#/comingSoon'><button type="button" id='comingSoon' class="btn btn-default btn-lg"><h3>COMING FRIDAY</h3></button></a>
@@ -38,13 +39,14 @@
       </div>
     </nav>
     
-    
+    <!-- This is where all the dynamically driven content will populate. -->
     <div ng-view>
       Placeholder
     </div>
     
     <footer>
   		Phone : (850) 302-0129 Address: 174 Miracle Strip Pkwy SE, Fort Walton Beach, FL 32548 <br />
+  		<!-- I dropped these guys down because it looked crowded. Maybe it is too much stuff crammed in footer -->
   		<section id="hangRight">
 	  		<a href="#/terms"> Terms and Conditions</a>
 	  		&nbsp;&nbsp;&nbsp;

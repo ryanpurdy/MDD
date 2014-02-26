@@ -1,7 +1,8 @@
     <h2 id='status'>Coming Friday</h2>
     
     <div id='content' class='row-fluid'>
-      
+    
+      <!-- This is the left side. Written info goes here. -->
       <div class='span8 info'>
         <h2 ng-controller = "movieController2">{{movies.title}}</h2>
 	<h2 ng-controller = "movieController2">RATED: {{movies.mpaa_rating}}</h2>
@@ -10,6 +11,7 @@
 	<p><span style="color: red;">I used this movie to show error checking worked. The API has no synopsis for this film for some reason.</span></p>
       </div>
       
+      <!-- This is the right side. Movie poster goes here. -->
       <div class='span4 poster'>
         <img ng-controller = "movieController2" src={{movies.posters.original}} alt={{movies.title}} class="img-responsive">
       </div>
