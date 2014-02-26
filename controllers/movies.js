@@ -10,6 +10,10 @@ movies.config(['$routeProvider', function($routeProvider){
 		.when('/comingSoon',{
 			templateUrl:'views/comingSoon.html',
 			controller: 'movieController2'})
+		.when('/confirm',{
+			templateUrl:'views/confirm.html'})	
+		.when('/fail',{
+			templateUrl:'views/fail.html'})	
 		.when('/contact',{
 			templateUrl:'views/contact.html'})	
 		.when('/terms',{

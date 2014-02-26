@@ -12,9 +12,8 @@
 	    if ($_POST['submit'] && $human == '4') {				 
 	        if (mail ($to, $subject, $body, $from)) { 
 		    	header( 'Location: ../#/confirm' ) ;
-		    
 		} else { 
-		    echo '<p>Something went wrong, go back and try again!</p>'; 
+		    header( 'Location: ../#/fail' ) ;
 		} 
 	    } else if ($_POST['submit'] && $human != '4') {
 			echo '<p>You answered the anti-spam question incorrectly!</p>';
