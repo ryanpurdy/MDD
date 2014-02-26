@@ -12,8 +12,10 @@ movies.config(['$routeProvider', function($routeProvider){
 			controller: 'movieController2'})
 		.when('/contact',{
 			templateUrl:'views/contact.html'})	
-		.when('/confirm',{
-			templateUrl:'views/confirm.html'})		
+		.when('/terms',{
+			templateUrl:'views/terms.html'})	
+		.when('/help',{
+			templateUrl:'views/help.html'})	
 
 		.otherwise({
 			redirectTo: '/nowShowing'

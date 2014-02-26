@@ -30,7 +30,7 @@ nav a{
     border-radius: 400px 400px 5px 5px; 
     -moz-border-radius: 400px 400px 5px 5px; 
     -webkit-border-radius: 390px 390px 5px 5px; 
-    border: 6px double yellow;
+    border: 6px solid yellow;
 }
 
 #status{
