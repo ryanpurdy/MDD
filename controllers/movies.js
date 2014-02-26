@@ -16,6 +16,8 @@ movies.config(['$routeProvider', function($routeProvider){
 			templateUrl:'views/terms.html'})	
 		.when('/help',{
 			templateUrl:'views/help.html'})	
+		.when('/copyright',{
+			templateUrl:'views/copyright.html'})	
 
 		.otherwise({
 			redirectTo: '/nowShowing'
