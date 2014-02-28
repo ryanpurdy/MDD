@@ -1,14 +1,14 @@
     <h2 id='status'>Coming Friday</h2>
     
-    <div id='content' class='row-fluid'>
+    <div id='content' class='row-fluid' itemscope itemtype ="http://schema.org/Movie">
     
       <!-- This is the left side. Written info goes here. -->
       <div class='span8 info'>
-        <h2 ng-controller = "movieController2">{{movies.title}}</h2>
-	<h2 ng-controller = "movieController2">RATED: {{movies.mpaa_rating}}</h2>
-	<h2 ng-controller = "movieController2">{{movies.runtime}} Minutes</h2>
-	<p ng-controller = "movieController2">DESCRIPTION: {{movies.synopsis}}</p>
-	<p><span style="color: red;">I used this movie to show error checking worked. The API has no synopsis for this film for some reason.</span></p>
+        <h2 itemprop="name" ng-controller = "movieController2">{{movies.title}}</h2>
+		<h2 ng-controller = "movieController2">RATED: {{movies.mpaa_rating}}</h2>
+		<h2 itemprop="duration" ng-controller = "movieController2">{{movies.runtime}} Minutes</h2>
+		<p itemprop="description" ng-controller = "movieController2">DESCRIPTION: {{movies.synopsis}}</p>
+		<p><span style="color: red;">I used this movie to show error checking worked. The API has no synopsis for this film for some reason.</span></p>
       </div>
       
       <!-- This is the right side. Movie poster goes here. -->

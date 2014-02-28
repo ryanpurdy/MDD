@@ -1,12 +1,12 @@
 <h2 id='status'>Now Showing</h2>
           
-    <div id='content' class='row-fluid'>
+    <div id='content' class='row-fluid' itemscope itemtype ="http://schema.org/Movie">
       <!-- This is the left side. Written info goes here. -->
       <div class='span8 info'>
-        <h2 ng-controller = "movieController">{{movies.title}}</h2>
+        <h2 itemprop="name" ng-controller = "movieController">{{movies.title}}</h2>
 		<h2 ng-controller = "movieController">RATED: {{movies.mpaa_rating}}</h2>
-		<h2 ng-controller = "movieController">{{movies.runtime}} Minutes</h2>
-		<p ng-controller = "movieController">DESCRIPTION: {{movies.synopsis}}</p>
+		<h2 itemprop="duration" ng-controller = "movieController">{{movies.runtime}} Minutes</h2>
+		<p itemprop="description" ng-controller = "movieController">DESCRIPTION: {{movies.synopsis}}</p>
       </div>
       
       <!-- This is the right side. Movie poster goes here. -->
